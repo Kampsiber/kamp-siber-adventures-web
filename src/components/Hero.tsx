@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Star, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-campsite.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-primary/40"></div>
       </div>
 
@@ -18,16 +15,14 @@ const Hero = () => {
         <div className="space-y-6">
           {/* Rating */}
           <div className="flex items-center justify-center space-x-1 text-sunset">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-current" />
-            ))}
+            {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
             <span className="ml-2 text-background font-medium">4.9/5 Rating</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-background leading-tight">
             Welcome to{" "}
-            <span className="bg-hero-gradient bg-clip-text text-transparent">
+            <span className="bg-hero-gradient bg-clip-text text-transparent text-6xl">
               Kamp Siber
             </span>
           </h1>
@@ -41,7 +36,7 @@ const Hero = () => {
           {/* Location */}
           <div className="flex items-center justify-center space-x-2 text-background/80">
             <MapPin className="h-5 w-5" />
-            <span className="text-sm font-medium">Riverside Paradise • Nature's Haven</span>
+            <span className="font-medium mx-[5px] px-[2px] my-0 py-0 text-base">Tolmin • Soča Valley</span>
           </div>
 
           {/* CTA Buttons */}
@@ -67,24 +62,24 @@ const Hero = () => {
       {/* Floating Stats */}
       <div className="absolute bottom-8 left-8 right-8 z-10">
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-          {[
-            { number: "100+", label: "Happy Campers" },
-            { number: "15", label: "Riverside Spots" },
-            { number: "8", label: "Luxury Pods" },
-            { number: "24/7", label: "Bar Service" },
-          ].map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-background/10 backdrop-blur-sm border border-background/20 rounded-lg px-4 py-3 text-center min-w-[100px]"
-            >
+          {[{
+          number: "100+",
+          label: "Happy Campers"
+        }, {
+          number: "15",
+          label: "Riverside Spots"
+        }, {
+          number: "8",
+          label: "Luxury Pods"
+        }, {
+          number: "24/7",
+          label: "Bar Service"
+        }].map((stat, index) => <div key={index} className="bg-background/10 backdrop-blur-sm border border-background/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
               <div className="text-lg font-bold text-background">{stat.number}</div>
               <div className="text-sm text-background/80">{stat.label}</div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
