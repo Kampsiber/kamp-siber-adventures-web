@@ -69,10 +69,10 @@ const Hero = () => {
           number: "15",
           label: "Riverside Spots"
         }, {
-          number: "8",
-          label: "Luxury Pods"
+          number: "5",
+          label: "Glamping Houses"
         }, {
-          number: "24/7",
+          number: "till 22h",
           label: "Bar Service"
         }].map((stat, index) => <div key={index} className="bg-background/10 backdrop-blur-sm border border-background/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
               <div className="text-lg font-bold text-background">{stat.number}</div>
