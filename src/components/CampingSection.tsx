@@ -78,8 +78,8 @@ const CampingSection = () => {
             <Card className="shadow-natural">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  Standard Site
-                  <span className="text-2xl font-bold text-primary">$35</span>
+                  Early Season
+                  <span className="text-2xl font-bold text-primary">€15</span>
                 </CardTitle>
                 <CardDescription>per night</CardDescription>
               </CardHeader>
@@ -96,8 +96,8 @@ const CampingSection = () => {
             <Card className="shadow-natural border-primary/20">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  Premium Site
-                  <span className="text-2xl font-bold text-primary">$55</span>
+                  Main Season
+                  <span className="text-2xl font-bold text-primary">€17.50</span>
                 </CardTitle>
                 <CardDescription>per night</CardDescription>
               </CardHeader>
