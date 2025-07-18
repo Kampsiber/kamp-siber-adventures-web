@@ -42,7 +42,7 @@ const GlampingSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           {/* Glamping Pods */}
           <div className="space-y-4">
-            <Card className="shadow-warm">
+            <Card className="shadow-warm hover:shadow-[0_0_30px_hsl(var(--sunset)/0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Riverside Pod
@@ -61,7 +61,7 @@ const GlampingSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-warm border-sunset/20">
+            <Card className="shadow-warm border-sunset/20 hover:shadow-[0_0_30px_hsl(var(--sunset)/0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Family Pod

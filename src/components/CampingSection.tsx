@@ -75,7 +75,7 @@ const CampingSection = () => {
 
           {/* Pricing Cards */}
           <div className="space-y-4">
-            <Card className="shadow-natural">
+            <Card className="shadow-natural hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Early Season
@@ -93,7 +93,7 @@ const CampingSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-natural border-primary/20">
+            <Card className="shadow-natural border-primary/20 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   Main Season
