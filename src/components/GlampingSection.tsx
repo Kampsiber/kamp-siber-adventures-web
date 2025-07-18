@@ -1,33 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Home, Wifi, Coffee, Sparkles } from "lucide-react";
-
 const GlampingSection = () => {
-  const amenities = [
-    {
-      icon: <Home className="h-6 w-6" />,
-      title: "Luxury Pods",
-      description: "Fully furnished eco-pods with comfortable beds and climate control"
-    },
-    {
-      icon: <Wifi className="h-6 w-6" />,
-      title: "Modern Amenities",
-      description: "Free WiFi, USB charging ports, and premium bathroom facilities"
-    },
-    {
-      icon: <Coffee className="h-6 w-6" />,
-      title: "Private Deck",
-      description: "Your own riverside deck with outdoor furniture and BBQ grill"
-    },
-    {
-      icon: <Sparkles className="h-6 w-6" />,
-      title: "Premium Service",
-      description: "Daily housekeeping, welcome basket, and concierge services"
-    }
-  ];
-
-  return (
-    <section id="glamping" className="py-20 relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/lovable-uploads/f09da32a-ff1c-43d9-9c6a-662aea1d8fef.png')"}}>
+  const amenities = [{
+    icon: <Home className="h-6 w-6" />,
+    title: "Luxury Pods",
+    description: "Fully furnished eco-pods with comfortable beds and climate control"
+  }, {
+    icon: <Wifi className="h-6 w-6" />,
+    title: "Modern Amenities",
+    description: "Free WiFi, USB charging ports, and premium bathroom facilities"
+  }, {
+    icon: <Coffee className="h-6 w-6" />,
+    title: "Private Deck",
+    description: "Your own riverside deck with outdoor furniture and BBQ grill"
+  }, {
+    icon: <Sparkles className="h-6 w-6" />,
+    title: "Premium Service",
+    description: "Daily housekeeping, welcome basket, and concierge services"
+  }];
+  return <section id="glamping" className="py-20 relative bg-cover bg-center bg-no-repeat" style={{
+    backgroundImage: "url('/lovable-uploads/f09da32a-ff1c-43d9-9c6a-662aea1d8fef.png')"
+  }}>
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -51,15 +45,7 @@ const GlampingSection = () => {
                 </CardTitle>
                 <CardDescription>per night • Sleeps 2</CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• King-size bed with luxury linens</li>
-                  <li>• Private bathroom with shower</li>
-                  <li>• Climate control & heating</li>
-                  <li>• Private riverside deck</li>
-                  <li>• Mini-fridge & coffee station</li>
-                </ul>
-              </CardContent>
+              
             </Card>
 
             <Card className="shadow-warm border-sunset/20 hover:shadow-[0_0_30px_hsl(var(--sunset)/0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -70,16 +56,7 @@ const GlampingSection = () => {
                 </CardTitle>
                 <CardDescription>per night • Sleeps 4</CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Master bedroom + bunk beds</li>
-                  <li>• Full bathroom with bathtub</li>
-                  <li>• Kitchenette with dining area</li>
-                  <li>• Large deck with BBQ grill</li>
-                  <li>• Living area with sofa bed</li>
-                  <li>• Kids' play corner</li>
-                </ul>
-              </CardContent>
+              
             </Card>
           </div>
 
@@ -95,15 +72,13 @@ const GlampingSection = () => {
             </p>
             
             <div className="grid sm:grid-cols-2 gap-4">
-              {amenities.map((amenity, index) => (
-                <div key={index} className="flex items-start space-x-3">
+              {amenities.map((amenity, index) => <div key={index} className="flex items-start space-x-3">
                   <div className="text-sunset mt-1">{amenity.icon}</div>
                   <div>
                     <h4 className="font-semibold text-foreground">{amenity.title}</h4>
                     <p className="text-sm text-muted-foreground">{amenity.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -117,8 +92,6 @@ const GlampingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default GlampingSection;
