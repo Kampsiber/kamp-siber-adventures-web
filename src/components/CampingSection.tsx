@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tent, Waves, TreePine, Flame } from "lucide-react";
 
 const CampingSection = () => {
@@ -67,9 +68,25 @@ const CampingSection = () => {
               <Button variant="nature" size="lg">
                 Reserve Camping Site
               </Button>
-              <Button variant="outline" size="lg">
-                View Site Map
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" size="lg">
+                    View Site Map
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
+                  <DialogHeader>
+                    <DialogTitle>Campsite Map</DialogTitle>
+                  </DialogHeader>
+                  <div className="relative w-full h-[60vh] overflow-hidden rounded-lg">
+                    <img 
+                      src="/lovable-uploads/d43b8665-ee8d-4633-8322-b8ef4b1f4e0f.png" 
+                      alt="Aerial view of the campsite showing buildings, camping areas, and access roads"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
