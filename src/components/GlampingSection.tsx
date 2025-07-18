@@ -27,8 +27,9 @@ const GlampingSection = () => {
   ];
 
   return (
-    <section id="glamping" className="py-20 bg-earth-gradient">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="glamping" className="py-20 relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/lovable-uploads/f09da32a-ff1c-43d9-9c6a-662aea1d8fef.png')"}}>
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Luxury Glamping
