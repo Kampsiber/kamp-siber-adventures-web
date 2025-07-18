@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Tent } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Menu, X, Tent, Globe } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+
+  const languages = [
+    { code: "EN", name: "English" },
+    { code: "SI", name: "Slovenian" },
+    { code: "DE", name: "German" }
+  ];
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -39,6 +47,27 @@ const Navigation = () => {
               <Button variant="hero" size="sm">
                 Book Now
               </Button>
+              
+              {/* Language Selector */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="flex items-center space-x-1">
+                    <Globe className="h-4 w-4" />
+                    <span>{selectedLanguage}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-background border border-border">
+                  {languages.map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      onClick={() => setSelectedLanguage(language.code)}
+                      className="hover:bg-accent hover:text-accent-foreground cursor-pointer"
+                    >
+                      {language.name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 
