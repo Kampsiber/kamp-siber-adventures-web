@@ -22,18 +22,12 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-background leading-tight animate-fade-in">
             Welcome to{" "}
-            <span className="bg-hero-gradient bg-clip-text text-transparent text-6xl">
-              Kamp Siber
-            </span>
+            
           </h1>
 
           {/* Logo */}
-          <div className="flex justify-center animate-scale-in">
-            <img 
-              src="/lovable-uploads/09d318a0-68e5-4853-b05f-23729c5e2972.png" 
-              alt="Kamp Siber Logo" 
-              className="h-24 sm:h-32 lg:h-40 w-auto"
-            />
+          <div className="flex justify-center animate-scale-in mx-[50px] rounded-3xl">
+            <img src="/lovable-uploads/09d318a0-68e5-4853-b05f-23729c5e2972.png" alt="Kamp Siber Logo" className="h-24 sm:h-32 lg:h-40 w-auto" />
           </div>
 
           {/* Subtitle */}
