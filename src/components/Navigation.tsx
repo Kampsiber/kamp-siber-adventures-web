@@ -1,11 +1,21 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, X, Tent, Globe } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const getCurrentLanguage = () => {
+    if (location.pathname.startsWith('/si')) return 'SI';
+    if (location.pathname.startsWith('/de')) return 'DE';
+    return 'EN';
+  };
+  
+  const [selectedLanguage, setSelectedLanguage] = useState(getCurrentLanguage());
 
   const languages = [
     { code: "EN", name: "English" },
@@ -60,7 +70,11 @@ const Navigation = () => {
                   {languages.map((language) => (
                     <DropdownMenuItem
                       key={language.code}
-                      onClick={() => setSelectedLanguage(language.code)}
+                      onClick={() => {
+                        setSelectedLanguage(language.code);
+                        if (language.code === 'EN') navigate('/');
+                        else navigate(`/${language.code.toLowerCase()}`);
+                      }}
                       className="hover:bg-accent hover:text-accent-foreground cursor-pointer"
                     >
                       {language.name}
